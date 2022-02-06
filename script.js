@@ -6,19 +6,19 @@
 // sumTo(3) = 3 + 2 + 1 = 6
 // Пример работы функции:
 
-const sumTo = (n) => {
-    if (n === 1 ) {return n;}
-    else {return n + sumTo(n - 1);}
-}
+// const sumTo = (n) => {
+//     if (n === 1 ) {return n;}
+//     else {return n + sumTo(n - 1);}
+// }
 
-console.log(sumTo(2));
-console.log(sumTo(3));
-console.log(sumTo(4));
-console.log(sumTo(5));
-console.log(sumTo(6));
-console.log(sumTo(7));
-console.log(sumTo(8));
-console.log(sumTo(9));
+// console.log(sumTo(2));
+// console.log(sumTo(3));
+// console.log(sumTo(4));
+// console.log(sumTo(5));
+// console.log(sumTo(6));
+// console.log(sumTo(7));
+// console.log(sumTo(8));
+// console.log(sumTo(9));
 
 //2. Написать функцию findShort , которая будет находит самое короткое слово в предложении. В случае если длина двух слов совпадает - вернуть первое найденое короткое слово. Пример работы функции:
 
@@ -30,7 +30,6 @@ function findShort(sentance){
     let minLenght = 100;
     let minItem;
     let arrWords = [];
-    let str;
     do {
         end = sentance.indexOf(" ", start);         //ищем " " в конце слова
         if (end === -1) {
