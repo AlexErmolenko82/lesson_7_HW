@@ -29,7 +29,7 @@ function findShort(sentance){
     const arrWords = sentance.split(" ").sort((a, b) => {
         return a.length - b.length;
         });
-    return console.log(arrWords[0]);
+    return arrWords[0];
 }
 
 const sentance = "lorem ipsum dolor sito amet consectetur adipiscing elit sedu duo eiusmod tempor incididunt unt labore";
