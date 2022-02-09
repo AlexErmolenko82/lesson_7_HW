@@ -25,12 +25,14 @@
 //Отсортировать этот массив по длине строк
 //Взять самый первый элемент у этого отсортированного массива
 
-function findShort(sentance){
-    const arrWords = sentance.split(" ").sort((a, b) => {
-        return a.length - b.length;
-        });
-    return arrWords[0];
-}
+// function findShort(sentance){
+//     const arrWords = sentance.split(" ").sort((a, b) => {
+//         return a.length - b.length;
+//         });
+//     return arrWords[0];
+// }
+
+function findShort(sentance){return sentance.split(" ").sort((a, b) => {return a.length - b.length;})[0];}
 
 const sentance = "lorem ipsum dolor sito amet consectetur adipiscing elit sedu duo eiusmod tempor incididunt unt labore";
 
