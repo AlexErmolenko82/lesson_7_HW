@@ -26,8 +26,6 @@
 //Взять самый первый элемент у этого отсортированного массива
 
 function findShort(sentance){
-    let minLength = 100;
-    let minItem;
     const arrWords = sentance.split(" ").sort((a, b) => {
         return a.length - b.length;
         });
