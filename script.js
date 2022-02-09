@@ -22,34 +22,18 @@
 
 //2. Написать функцию findShort , которая будет находит самое короткое слово в предложении. В случае если длина двух слов совпадает - вернуть первое найденое короткое слово. Пример работы функции:
 
-const sentance = "lorem ipsum dolor sito amet consectetur adipiscing elit sed duo eiusmod tempor incididunt unt labore";
-
 function findShort(sentance){
-    let start = 0;
-    let end;
-    let minLenght = 100;
+    let minLength = 100;
     let minItem;
-    let arrWords = [];
-    do {
-        end = sentance.indexOf(" ", start);         //ищем " " в конце слова
-        if (end === -1) {
-                end = sentance.lenght;              // если не находит пробел, то это конец строки
-            }
-        arrWords.push(sentance.slice(start, end));  //добавляем вырезаное слово в массив
-        start = end + 1;                            //задаём начальный индекс нового слова
-        }
-    while (end != sentance.lenght);
-
-        arrWords.forEach(function(item, i, arr) {   //для каждого элемента массива считаем длину
-            if (arrWords[i].length < minLenght) {
-                minLenght = arrWords[i].length;     //фиксируем минимальную длину в переменную
-                minItem = i;                        //фиксируем индекс минимального слова
-            }
+    const arrWords = sentance.split(" ").sort((a, b) => {
+        return a.length - b.length;
         });
-    return arrWords[minItem];
+    return console.log(arrWords[0]);
 }
 
-console.log(findShort(sentance)); // sit
+const sentance = "lorem ipsum dolor sito amet consectetur adipiscing elit sedu duo eiusmod tempor incididunt unt labore";
+
+console.log(findShort(sentance)); // duo
 console.log(findShort("Hello world")); // Hello
 console.log(findShort("Hi")); // Hi
 console.log(findShort("She is David's sister")); // is
